@@ -46,23 +46,29 @@ const Home = () => {
         </div>
       </nav>
 
-      <div className="container d-flex flex-column style={{ height: 'calc(100vh - 56px)' }}  rounded text-center">
+      <div className="container d-flex flex-column justify-content-center align-items-center text-center rounded"
+  style={{ height: 'calc(100vh - 56px)' }}>
         <h1 className="display-4">Welcome to the Password Reset App</h1>
         <p className="lead">Easily register, log in, and reset your password securely using our simple flow.</p>
         <hr className="my-4" />
         <div className='d-flex justify-content-center gap-3'>
           <Link to={'/register'}>
-        <button className='btn btn-primary'>
-          Register
-        </button>
-        </Link>
+            <button className='btn btn-primary'>
+              Register
+            </button>
+          </Link>
           <Link to={'/login'}>
-        <button className='btn btn-primary px-3'>
-          Login
-        </button>
-        </Link>
+            <button className='btn btn-primary px-3'>
+              Login
+            </button>
+          </Link>
+          
+            <button className='btn btn-primary px-3' onClick={handleLogout}> 
+              Logout
+            </button>
+         
         </div>
-        
+
       </div>
 
 

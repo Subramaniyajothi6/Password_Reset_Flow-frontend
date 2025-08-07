@@ -1,10 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useAuth } from '../context/AuthContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
+  const navigate = useNavigate();
   const { user, setUser } = useAuth();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,6 +36,8 @@ const Login = () => {
       localStorage.setItem('token', token);
 
       alert("Login successful!");
+
+      navigate('/');
     }
      catch (err) {
       console.error("Unexpected error occurred:", err);
