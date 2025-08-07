@@ -23,9 +23,9 @@ const Home = () => {
 
 
 
-
+ 
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-        <div className="container-fluid">
+        <div className="container-fluid container">
           <Link className="navbar-brand" to="/">Password Reset Flow</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
