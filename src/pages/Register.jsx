@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const Register = () => {
  const { user , setUser } = useAuth();
 
+ const navigate = useNavigate();
  const  handleSubmit = async (e) => {
     e.preventDefault();
    try {
@@ -27,6 +28,8 @@ const Register = () => {
       else {
         alert(data.message);
       }
+
+      navigate('/login');
    } catch (error) {
     
     console.log({message:error.message});
