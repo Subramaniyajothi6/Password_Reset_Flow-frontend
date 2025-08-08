@@ -92,7 +92,7 @@ This project is deployed using Netlify:
 
 Make sure to enable redirects by adding the following rule in netlify.toml or a _redirects file:
 
-/*    /index.html   200
+`/*    /index.html   200`
 
 📌 Notes
 
